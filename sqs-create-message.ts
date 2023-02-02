@@ -1,5 +1,5 @@
 import { sqs } from './src/config';
-import { QUEUE_URL } from './src/constants';
+import { SQS_QUEUE_URL } from './src/constants';
 
 const createSQSmessage = async () => {
   // await sqs.createQueue({ QueueName: SQS_QUEUE_NAME }).promise();
@@ -12,7 +12,7 @@ const createSQSmessage = async () => {
   })
 
   await sqs.sendMessage({
-    QueueUrl: QUEUE_URL,
+    QueueUrl: SQS_QUEUE_URL,
     MessageBody: message,
   }).promise()
 
