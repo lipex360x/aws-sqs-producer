@@ -12,3 +12,6 @@
 
 * Delete SQS Message
 > env SQS_QUEUE_NAME=queueName ts-node sqs-delete-message.ts
+
+* Receive SQS Message
+> env SQS_QUEUE_NAME=queueName ts-node sqs-receive-message.ts
