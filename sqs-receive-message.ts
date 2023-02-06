@@ -2,11 +2,13 @@ import { sqs } from './src/config';
 import { SQS_QUEUE_URL } from './src/constants';
 
 const receiveSQSmessage = async () => {
-  const { Messages } = await sqs.receiveMessage({ QueueUrl: SQS_QUEUE_URL }).promise()
+  const data = await sqs.receiveMessage({ 
+    QueueUrl: SQS_QUEUE_URL 
+  }).promise()
 
-  if(!Messages?.length) return
+  if(data.Messages?.length) return
 
-  const { Body, ReceiptHandle } = Messages[0]
+  const { Body, ReceiptHandle } = data.Messages![0]
 
   const messageReceiptHandle = ReceiptHandle!
 
