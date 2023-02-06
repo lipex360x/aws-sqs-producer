@@ -13,4 +13,3 @@ const createSQSqueue = async () => {
 };
 
 createSQSqueue()
-

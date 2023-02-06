@@ -10,4 +10,3 @@ const deleteSQSqueue = async () => {
 };
 
 deleteSQSqueue()
-

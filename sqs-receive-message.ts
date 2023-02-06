@@ -24,4 +24,3 @@ const receiveSQSmessage = async () => {
 };
 
 receiveSQSmessage()
-

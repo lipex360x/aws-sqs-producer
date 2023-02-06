@@ -20,4 +20,3 @@ const createSQSmessage = async () => {
 };
 
 createSQSmessage()
-
