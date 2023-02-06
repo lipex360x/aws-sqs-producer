@@ -6,7 +6,6 @@ const createSQSmessage = async () => {
   // await sqs.createQueue({ QueueName: SQS_QUEUE_NAME }).promise();
 
   const message = JSON.stringify({
-    id: randomUUID(),
     body: {
       message: 'hello SQS'
     }
