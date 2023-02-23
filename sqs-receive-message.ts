@@ -6,7 +6,7 @@ const receiveSQSmessage = async () => {
     QueueUrl: SQS_QUEUE_URL 
   }).promise()
 
-  if(data.Messages?.length) return
+  if(!data.Messages?.length) return
 
   const { Body, ReceiptHandle } = data.Messages![0]
 
@@ -16,10 +16,10 @@ const receiveSQSmessage = async () => {
 
   console.log('Message Body', messageBody)
 
-  await sqs.deleteMessage({ 
-    QueueUrl: SQS_QUEUE_URL, 
-    ReceiptHandle: messageReceiptHandle 
-  }).promise()
+  // await sqs.deleteMessage({ 
+  //   QueueUrl: SQS_QUEUE_URL, 
+  //   ReceiptHandle: messageReceiptHandle 
+  // }).promise()
 
 };
 

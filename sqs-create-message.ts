@@ -1,4 +1,3 @@
-import { randomUUID } from 'node:crypto';
 import { sqs } from './src/config';
 import { SQS_QUEUE_URL } from './src/constants';
 
